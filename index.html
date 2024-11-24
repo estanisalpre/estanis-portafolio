@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estanislao Salinas Previte</title>
+    <!--Link CSS-->
+    <link rel="stylesheet" href="/src/styles/style.css">
+    <!--Link Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+25&family=Pixelify+Sans:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!--Link Favicon-->
+    <link rel="shortcut icon" href="/src/assets/img/icons/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <section class="machineContainer">
+            <div class="preloader">
+                <figure class="machine">
+                    <section class="face frontSide">
+                        <aside class="leftContainer">
+                            <marquee class="marquee" behavior="" direction="">SHOP HERE!</marquee>
+                            <figure class="orderPanel">
+                                <ul>
+                                    <li><button id="aboutMeButton">Sobre mi</button></li>
+                                    <li><button id="studiesButton">Estudios</button></li>
+                                    <li><button id="experienceButton">Experiencia</button></li>
+                                    <li><button id="projectButton">Proyectos</button></li>
+                                    <li><button id="languageButton">Idiomas</button></li>
+                                    <li><button id="skillsButton">Habilidades</button></li>
+                                </ul>
+                            </figure>
+                            <figure class="moneyIcon"></figure>
+                            <figure class="payment"></figure>
+                            <figure class="musicPanel">
+                                <div class="playPause">
+                                    <img id="playButton" src="/src/assets/img/icons/play.png" alt="Play Icon">
+                                    <img id="pauseButton" src="/src/assets/img/icons/pause.png" alt="Pause Icon">
+                                </div>
+                                <input type="range" name="volumeControl" class="volumeControl" id="volumeControl" value="0.5" min="0" max="1" step="0.01">
+                            </figure>
+                        </aside>
+                        <aside class="rightContainer">
+                            <div class="titleZone">
+                                <marquee class="marquee" behavior="" direction="">Javascript - HTML - CSS - SaSS - Git & Github - Java & POO with Java - SQLServer - Metodologías Ágiles - Adobe Photoshop - Adobe Premiere</marquee>
+                            </div>
+                            <div class="productsZone"></div>
+                            <div class="dropZone"></div>
+                        </aside>
+                    </section>
+                    <section class="face leftSide">
+                        <div class="nameContainer">
+                            <span class="myName">ESTANISLAO SALINAS PREVITE</span>
+                            <span class="myProfession">Desarrollador de Software</span>
+                        </div>
+                    </section>
+                    <section class="face rightSide"></section>
+                    <section class="productsCube">
+                        <figure class="face productFrontFace"></figure>
+                        <figure class="face productBackFace"></figure>
+                        <figure class="face productLeftFace"></figure>
+                        <figure class="face productRightFace"></figure>
+                        <figure class="face productBottomFace"></figure>
+                        <figure class="face productTopFace"></figure>
+                        <figure class="face topDivPanel"></figure>
+                        <figure class="face bottomDivPanel"></figure>
+                        <figure class="face frontGlass">
+                            <div class="topProducts">
+                                <span id="aboutMe" class="product aboutMe">Sobre mi</span>
+                                <span id="myStudies" class="product myStudies">Estudios</span>
+                                <span id="experience" class="product myExperience">Experiencia</span>
+                            </div>
+                            <div class="bottomProducts">
+                                <span id="projects" class="product projects">Proyectos</span>
+                                <span id="languages" class="product languages">Idiomas</span>
+                                <span id="skills" class="product knowledges">Habilidades</span>
+                            </div>
+                            <div class="downArrow"><img src="/src/assets/img/icons/downArrow.png" alt="Arrow that indicates the dropzone"></div>
+                        </figure>
+                        <figure id="aboutMeProduct" class="aboutMeProduct">
+                            <figure class="face rightFace"></figure>
+                            <figure class="face frontFace frontAboutMe"></figure>
+                            <figure class="face leftFace"></figure>
+                            <figure class="face backFace"></figure>
+                            <figure class="face topFace"></figure>
+                            <figure class="face bottomFace"></figure>
+                        </figure>
+                        <figure id="experienceProduct" class="experienceProduct">
+                            <figure class="face rightFace"></figure>
+                            <figure class="face frontFace frontExperience"></figure>
+                            <figure class="face leftFace"></figure>
+                            <figure class="face backFace"></figure>
+                            <figure class="face topFace"></figure>
+                            <figure class="face bottomFace"></figure>
+                        </figure>
+                        <figure id="studiesProduct" class="studiesProduct">
+                            <figure class="face rightFace"></figure>
+                            <figure class="face frontFace frontStudies"></figure>
+                            <figure class="face leftFace"></figure>
+                            <figure class="face backFace"></figure>
+                            <figure class="face topFace"></figure>
+                            <figure class="face bottomFace"></figure>
+                        </figure>
+                        <figure id="projectProduct" class="projectProduct">
+                            <figure class="face rightFace"></figure>
+                            <figure class="face frontFace frontProject"></figure>
+                            <figure class="face leftFace"></figure>
+                            <figure class="face backFace"></figure>
+                            <figure class="face topFace"></figure>
+                            <figure class="face bottomFace"></figure>
+                        </figure>
+                        <figure id="languageProduct" class="languageProduct">
+                            <figure class="face rightFace"></figure>
+                            <figure class="face frontFace frontLanguage"></figure>
+                            <figure class="face leftFace"></figure>
+                            <figure class="face backFace"></figure>
+                            <figure class="face topFace"></figure>
+                            <figure class="face bottomFace"></figure>
+                        </figure>
+                        <figure id="skillsProduct" class="skillsProduct">
+                            <figure class="face rightFace"></figure>
+                            <figure class="face frontFace frontSkills"></figure>
+                            <figure class="face leftFace"></figure>
+                            <figure class="face backFace"></figure>
+                            <figure class="face topFace"></figure>
+                            <figure class="face bottomFace"></figure>
+                        </figure>
+                    </section>
+                    <section class="dropZoneCube">
+                        <figure class="face dropZoneFrontFace"></figure>
+                        <figure class="face dropZoneBackFace"></figure>
+                        <figure class="face dropZoneRightFace"></figure>
+                        <figure class="face dropZoneBottomFace"></figure>
+                    </section>
+                    <figure class="machineShadow"></figure>
+                    <figure class="floor"></figure>
+                </figure>
+            </div>
+        </section>
+        <article id="aboutMeArticle" class="aboutMeArticle">
+            <img src="/src/assets/img/profilePicture.png" alt="Estanislao Salinas Previte Picture">
+            <h3>Desarrollador de Software</h3>
+            <span>¡Hola y bienvenidos a mi portafolio! Mi nombre es Estanislao Salinas Previte. <br> <br> Tengo 27 años, vivo en Medellín, Colombia y me encuentro estudiando Técnico en Desarrollo de Software en la institución "CESDE" 👨‍🎓</span>
+            <article class="professionalProfile">
+                <h2>Perfil Profesional</h2>
+                <p>Destaco mi responsabilidad por los objetivos que se me asignan, mi altruismo en el trabajo en equipo y mi capacidad por escuchar para crecer profesionalmente.
+                    Soy una persona creativa, con facilidad de adaptación y capaz de trabajar bajo presión.</p>
+            </article>
+            <article class="personalProfile">
+                <h2>Perfil Personal</h2>
+                <p>Soy una persona dedicada, responsable y honesta, ante todo.
+                    Apasionado por aprender y crecer en conocimientos. Los desafíos los veo como oportunidades para mejorar tanto personal como profesional.</p>
+            </article>
+            <article class="contactMe">
+                <h2>¡Contáctame!</h2>
+                <ul>
+                    <li>📱 317 6427804</li>
+                    <li>📧 estanisprevite@hotmail.com</li>
+                    <li>📟<a href="https://www.linkedin.com/in/estanislaosprevite/">Mi Perfil LinkedIn</a></li>
+                </ul>
+            </article>
+            <button id="closeAboutMe" class="closeButton">Cerrar</button>
+        </article>
+        <article id="studiesArticle" class="studiesArticle">
+            <h1>Estudios</h1>
+            <button id="closeStudies" class="closeButton">Cerrar</button>
+        </article>
+        <article id="experienceArticle" class="experienceArticle">
+            <h1>Experiencia Laboral</h1>
+            <article class="firstExperience">
+                <h2>Posproducción de video - Diseño Gráfico</h2>
+                <span>2014 a 2017 - Junin, Argentina</span> <br> <br>
+                <p>A muy temprana edad, comencé mi emprendimiento de filmación, posproducción de video, fotografía y diseño gráfico de eventos sociales. <br><br>
+                En dicha labor, desarrollé mis conocimientos en Adobe Photoshop, Adobe Premiere y Adobe After Effects, aunque lo que más destaco es mi aprendizaje en posproducción audiovisual y la pasión por el diseño.</p>
+            </article>
+            <article class="secondExperience">
+                <h2>Administrador de comercio - 'Pasta Patrona'</h2>
+                <span>2017 a 2021 - Junín, Argentina</span> <br> <br>
+                <p>En un negocio familiar, comencé mi experiencia laboral desarrollando mis habilidades en áreas de tesorería (pagos, órdenes de compras, inventario, entre otros) y ventas al público. <br> <br> Desarrollé mis habilidades blandas en la atención y comunicación que un cliente requiere.</p>
+            </article>
+            <article class="thirdExperience">
+                <h2>Comercial - De Lolita Resto Café SAS</h2> 
+                <span>2022 - actualidad - Medellín, Colombia</span> <br> <br>
+                <p>En De Lolita, comencé como conductor encargado de entregar mercancía a los puntos propios de la empresa.
+                    Medio año luego, mis líderes decidieron darme un aumento por mi desempeño y compromiso en la compañía. Recibí un cargo de mayor responsabilidad y desafíos nuevos: administrar un canal de ventas con más de cincuenta clientes.
+                   <br> <br> Esta labor me ha permitido desarrollar mis habilidades blandas al comunicarme con clientes, escuchar sus requerimientos e intentar satisfacer sus necesidades. Además, incrementé mis habilidades para trabajar en equipo y entender la jerarquía y funcionalidad de una empresa de más de doscientos empleados.</p>
+            </article>
+            <button id="closeExperience" class="closeButton">Cerrar</button>
+        </article>
+        <article id="projectsArticle" class="projectsArticle">
+            <h1>Proyectos</h1>
+            <article class="insideProjectArticle">
+                <p>Por el momento, ¡con mucho esmero puedo decir que este portafolio es mi primer gran proyecto!</p>
+                <h2>Sobre el proyecto</h2>
+                <p>Mi idea inicial fue hacer un portafolio que no sea estático, sino dinámico, donde el usuario pueda interactuar con una interfaz para conseguir la información que busca. Así fue que se me ocurrió diseñar en 3D una dispensadora.</p>
+                <p>El portafolio está realizado con <img src="/src/assets/img/icons/html.png" alt="HTML Icon">, <img src="/src/assets/img/icons/css.png" alt="CSS Icon">, <img src="/src/assets/img/icons/sass.png" alt="SaSS Icon"> & <img src="/src/assets/img/icons/js.png" alt="Javascript Icon"></p>
+            </article>
+            <button id="closeProjects" class="closeButton">Cerrar</button>
+        </article>
+        <article id="languagesArticle" class="languagesArticle">
+            <h1>Idiomas</h1>
+            <article class="english">
+                <img src="/src/assets/img/icons/ingles.png" alt="Ícono Bandera Inglesa">
+                <h2>English</h2>
+                <p>A la par del Bachiller, realicé una academia durante 8 años de Inglés en la institución "English Language Center". <br> <br> Aprendí a leer y escuchar en el idioma. También vocabulario y la gramática, al igual que tener una buena comprensión lectora. <br> <br> Al finalizar, recibí el Diploma de Nivel Superior (B2 Intermedio)</p>
+            </article>
+            <article class="español">
+                <img src="/src/assets/img/icons/español.png" alt="Ícono Bandera Inglesa">
+                <h2>Español</h2>
+                <p>El español es mi idioma nativo. <br> <br> Con mi experiencia como 'Comercial', desarrollé habilidades para comunicarme en equipo, atención personalizada a clientes y a escuchar las inquietudes que se les presente. <br> <br> Esto me ha permitido entender necesidades, ser creativo en desarrollar soluciones y a trabajar bajo presión</p>
+            </article>
+            <button id="closeLanguages" class="closeButton">Cerrar</button>
+        </article>
+        <article id="skillsArticle" class="skillsArticle">
+            <ul>
+                <li><img src="/src/assets/img/icons/js.png" alt="Javascript Icon"><span>Javascript</span><div class="superBar"><div class="javascriptBar"></div></div><span>70%</span></li>
+                <li><img src="/src/assets/img/icons/poo.png" alt="Programacion Orientada a Objetos Icon"><span>POO</span><div class="superBar"><div class="pooBar"></div></div><span>50%</span></li>
+                <li><img src="/src/assets/img/icons/java.png" alt="Java Icon"><span>Java</span><div class="superBar"><div class="javaBar"></div></div><span>60%</span></li>
+                <li><img src="/src/assets/img/icons/html.png" alt="HTML:5 Icon"><span>HTML</span><div class="superBar"><div class="htmlBar"></div></div><span>90%</span></li>
+                <li><img src="/src/assets/img/icons/css.png" alt="CSS:3 Icon"><span>CSS</span><div class="superBar"><div class="cssBar"></div></div><span>90%</span></li>
+                <li><img src="/src/assets/img/icons/sass.png" alt="SaSS Icon"><span>SaSS</span><div class="superBar"><div class="sassBar"></div></div><span>60%</span></li>
+                <li><img src="/src/assets/img/icons/responsive.png" alt="Mobile Responsive Icon"><span>Responsive Design</span><div class="superBar"><div class="responsiveBar"></div></div><span>70%</span></li>
+                <li><img src="/src/assets/img/icons/git.png" alt="Git Icon"><span>Git & Github</span><div class="superBar"><div class="gitBar"></div></div><span>60%</span></li>
+                <li><img src="/src/assets/img/icons/photoshop.png" alt="Adobe Photoshop Icon"><span>Adobe Photoshop</span><div class="superBar"><div class="photoshopBar"></div></div><span>60%</span></li>
+                <li><img src="/src/assets/img/icons/premiere.png" alt="Adobe Premiere Icon"><span>Adobe Premiere</span><div class="superBar"><div class="premiereBar"></div></div><span>80%</span></li>
+                <li><img src="/src/assets/img/icons/aftereffects.png" alt="Adobe After Effects Icon"><span>Adobe After Effects</span><div class="superBar"><div class="afterEffectsBar"></div></div><span>50%</span></li>
+                <li><img src="/src/assets/img/icons/sql.png" alt="SQL Icon"><span>SQL & SQLServer</span><div class="superBar"><div class="sqlBar"></div></div><span>60%</span></li>
+            </ul>
+            <button id="closeSkills" class="closeButton">Cerrar</button>
+        </article>
+        <section>
+            <audio id="aboutMeEffectSound" src="/src/assets/sound_effects/soundEffectMachine.mp3"></audio>
+            <audio id="studiesEffectSound" src="/src/assets/sound_effects/soundEffectMachine.mp3"></audio>
+            <audio id="experienceEffectSound" src="/src/assets/sound_effects/soundEffectMachine.mp3"></audio>
+            <audio id="projectEffectSound" src="/src/assets/sound_effects/soundEffectMachine.mp3"></audio>
+            <audio id="languageEffectSound" src="/src/assets/sound_effects/soundEffectMachine.mp3"></audio>
+            <audio id="skillsEffectSound" src="/src/assets/sound_effects/soundEffectMachine.mp3"></audio>
+            <audio id="backgroundMusic" src="/src/assets/sound_effects/backgroundMusic.mp3"></audio>
+        </section>
+    </main>
+    <!--Link JS-->
+    <script src="/src/js/main.js"></script>
+</body>
+</html>

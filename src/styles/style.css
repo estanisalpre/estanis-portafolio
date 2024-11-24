@@ -1,0 +1,930 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  zoom: 90%;
+}
+
+body {
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+.machineContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+.preloader {
+  perspective: 1600px;
+  padding: 25px;
+}
+
+.machine {
+  position: relative;
+  width: 400px;
+  height: 800px;
+  transform-style: preserve-3d;
+  border: 3px solid rgb(140, 23, 111);
+  transform: rotateY(-50deg);
+  transition: all 1s ease-in-out;
+  z-index: 1000;
+}
+
+.machine:hover {
+  transform: rotateY(30deg) scale(1.8);
+}
+
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.frontSide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: transparent;
+  transition: all 0.1s ease;
+  z-index: 3000;
+}
+
+.leftSide {
+  border: 3px solid #5d0c5e;
+  background-image: url(/src/assets/img/leftSide.png);
+  width: 400px;
+  height: 800px;
+  transform: rotateY(90deg) translateZ(195px) translateX(200px) translateY(-3px);
+  overflow: hidden;
+  cursor: default;
+}
+
+.nameContainer {
+  width: 400px;
+  height: 800px;
+  display: flex;
+  justify-content: top;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 120px;
+  padding-left: 20px;
+}
+
+.myName {
+  font-size: 50px;
+  width: 400px;
+  text-align: left;
+  font-weight: 600;
+  color: rgb(228, 227, 227);
+  text-shadow: 0px 5px 1px black;
+}
+
+.myProfession {
+  font-size: 25px;
+  width: 400px;
+  text-align: left;
+  font-weight: 600;
+  font-family: "Pixelify Sans", sans-serif;
+  color: rgb(151, 244, 93);
+  text-shadow: 0px 5px 1px black;
+}
+
+.rightSide {
+  background-color: rgb(44, 72, 118);
+  border: 3px solid #631b4f;
+  width: 400px;
+  height: 800px;
+  transform: rotateY(90deg) translateZ(-200px) translateX(200px) translateY(-2px);
+  background-image: url(/src/assets/img/rightSide.png);
+}
+
+.leftContainer {
+  width: 30%;
+  height: 100%;
+  background-image: url(/src/assets/img/rightSide.png);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 25px;
+  padding-bottom: 10px;
+}
+.leftContainer h3 {
+  color: white;
+  text-align: center;
+  font-family: "Pixelify Sans", sans-serif;
+  cursor: default;
+}
+
+.orderPanel {
+  width: 95%;
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  z-index: 3000;
+}
+
+.orderPanel ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 3000;
+  gap: 5px;
+}
+
+.orderPanel li {
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  z-index: 3000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.orderPanel li button {
+  width: 95%;
+  height: auto;
+  cursor: pointer;
+  padding: 2px;
+  z-index: 3000;
+  border-left: 4px solid black;
+  border-top: 1px solid black;
+  border-bottom: 3px solid black;
+  border-right: 1px solid black;
+  box-shadow: 0px 0px 5px 1px black;
+  background-color: rgb(151, 244, 93);
+  color: black;
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.orderPanel li button:hover {
+  background-color: white;
+  z-index: 3000;
+}
+
+.moneyIcon {
+  background-image: url(/src/assets/img/gif/dineroVolando.gif);
+  width: 55%;
+  height: 6%;
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px;
+}
+
+.payment {
+  width: 55%;
+  height: 2%;
+  border-radius: 10px;
+  border: 3px solid rgb(222, 4, 117);
+  background-color: black;
+  margin-top: -20px;
+}
+
+.musicPanel {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.playPause {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+}
+.playPause img {
+  width: 20px;
+  height: auto;
+  filter: drop-shadow(0px 0px 5px black);
+  cursor: pointer;
+}
+
+.volumeControl {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  background-color: rgb(151, 244, 93);
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 1px black;
+  width: 60%;
+  height: 10px;
+  transform: rotate(270deg);
+}
+
+.volumeControl::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: grab;
+  border-radius: 5px;
+  width: 5px;
+  background-color: black;
+  height: 20px;
+}
+
+.rightContainer {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.titleZone {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background-image: url(/src/assets/img/gif/streetBackground.gif);
+  background-position: center;
+  background-size: cover;
+  cursor: default;
+}
+
+.marquee {
+  background-color: rgb(244, 93, 169);
+  width: 100%;
+  height: 30px;
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 22px;
+  z-index: 2500;
+  cursor: default;
+}
+
+.productsZone {
+  width: 100%;
+  height: 10%;
+  background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255, 255, 255, 0.4) 0%, rgba(0, 0, 0, 0.25) 200%);
+  background-blend-mode: multiply;
+  transform: translateY(108px);
+}
+
+.dropZone {
+  width: 100%;
+  height: 12%;
+  background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255, 255, 255, 0.4) 0%, rgba(0, 0, 0, 0.25) 200%);
+  background-blend-mode: multiply;
+}
+
+.productsCube {
+  position: relative;
+  width: 285px;
+  height: 320px;
+  transform-style: preserve-3d;
+  border: 3px solid rgb(61, 61, 61);
+  transform: rotateY(-50deg);
+  transition: all 1s ease-in-out;
+  transform: translateX(110px) translateY(198px);
+  cursor: default;
+}
+
+.productFrontFace {
+  background-color: transparent;
+  width: 280px;
+  height: 320px;
+}
+
+.productLeftFace {
+  background-color: rgb(67, 34, 62);
+  width: 340px;
+  height: 320px;
+  transform: rotateY(90deg) translateZ(110px) translateX(170px);
+}
+
+.productRightFace {
+  background-color: rgb(67, 34, 62);
+  width: 340px;
+  height: 320px;
+  transform: rotateY(90deg) translateZ(-170px) translateX(170px);
+}
+
+.productBottomFace {
+  background-color: rgb(67, 34, 62);
+  width: 280px;
+  height: 320px;
+  transform: rotateX(-90deg) translateY(160px) translateZ(160px);
+}
+
+.productTopFace {
+  background-color: rgb(67, 34, 62);
+  width: 280px;
+  height: 320px;
+  transform: rotateX(-90deg) translateY(160px) translateZ(-160px);
+}
+
+.productBackFace {
+  width: 280px;
+  height: 320px;
+  background-color: rgb(67, 34, 62);
+  transform: translateZ(-320px);
+}
+
+.topDivPanel {
+  background-color: rgb(255, 255, 255);
+  width: 270px;
+  height: 320px;
+  transform: translateX(10px) rotateX(90deg) translateZ(30px) translateY(-170px);
+}
+
+.bottomDivPanel {
+  background-color: rgb(245, 245, 245);
+  width: 270px;
+  height: 320px;
+  transform: translateX(10px) rotateX(90deg) translateZ(-60px) translateY(-170px);
+}
+
+.frontGlass {
+  background-image: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%);
+  opacity: 0.4;
+  width: 277px;
+  height: 320px;
+  transform: translateX(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1100;
+}
+.frontGlass .topProducts, .frontGlass .bottomProducts {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+}
+.frontGlass .topProducts {
+  transform: translateY(-10px);
+}
+.frontGlass .bottomProducts {
+  transform: translateY(55px);
+}
+.frontGlass .product {
+  border: 1px solid black;
+  padding: 3px;
+  opacity: 1;
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 14px;
+}
+.frontGlass .downArrow {
+  width: 60px;
+  height: auto;
+  transform: translateY(90px);
+}
+.frontGlass .downArrow img {
+  width: 100%;
+  height: 100%;
+}
+
+.dropZoneCube {
+  position: relative;
+  width: 150px;
+  height: 320px;
+  transform-style: preserve-3d;
+  transform: rotateY(-50deg);
+  transition: all 1s ease-in-out;
+  transform: translateX(150px) translateY(250px) translateZ(70px);
+}
+
+.dropZoneFrontFace {
+  background-color: transparent;
+  width: 200px;
+  height: 100px;
+}
+
+.dropZoneBackFace {
+  background-color: rgb(67, 34, 62);
+  width: 280px;
+  height: 100px;
+  transform: translateZ(-250px) translateY(13px) translateX(-34px);
+}
+
+.dropZoneRightFace {
+  background-color: rgb(67, 34, 62);
+  width: 200px;
+  height: 150px;
+  transform: rotateY(90deg) translateZ(-135px) translateX(170px) translateY(10px);
+}
+
+.dropZoneBottomFace {
+  background-color: rgb(130, 64, 120);
+  width: 280px;
+  height: 160px;
+  transform: rotateX(-105deg) translateY(140px) translateZ(90px) translateX(-35px);
+}
+
+.aboutMeProduct, .aboutMeProduct2, .experienceProduct, .studiesProduct, .projectProduct, .languageProduct,
+.skillsProduct {
+  position: relative;
+  width: 35px;
+  height: 70px;
+  transform-style: preserve-3d;
+  transform: rotateY(-50deg);
+  transition: all 1s ease-in-out;
+}
+
+.aboutMeProduct {
+  transform: translateX(30px) translateY(60px) translateZ(-40px);
+}
+
+.experienceProduct {
+  transform: translateX(210px) translateY(-10px) translateZ(-40px);
+}
+
+.studiesProduct {
+  transform: translateX(120px) translateY(-80px) translateZ(-40px);
+}
+
+.projectProduct {
+  transform: translateX(30px) translateY(-62px) translateZ(-40px);
+}
+
+.languageProduct {
+  transform: translateX(120px) translateY(-131px) translateZ(-40px);
+}
+
+.skillsProduct {
+  transform: translateX(210px) translateY(-201px) translateZ(-40px);
+}
+
+.rightFace {
+  background-image: url(/src/assets/img/rightSide.png);
+  background-position: center;
+  background-size: cover;
+  width: 35px;
+  height: 70px;
+  transform: rotateY(90deg) translateZ(18px);
+}
+
+.leftFace {
+  background-image: url(/src/assets/img/rightSide.png);
+  background-position: center;
+  background-size: cover;
+  width: 35px;
+  height: 70px;
+  transform: rotateY(90deg) translateZ(-18px);
+}
+
+.backFace {
+  background-image: url(/src/assets/img/rightSide.png);
+  background-position: center;
+  background-size: cover;
+  width: 35px;
+  height: 70px;
+  transform: translateZ(-18px);
+}
+
+.topFace {
+  background-image: url(/src/assets/img/rightSide.png);
+  background-position: center;
+  background-size: cover;
+  width: 35px;
+  height: 35px;
+  transform: rotateX(90deg) translateZ(17px);
+}
+
+.bottomFace {
+  background-image: url(/src/assets/img/rightSide.png);
+  background-position: center;
+  background-size: cover;
+  width: 35px;
+  height: 35px;
+  transform: rotateX(90deg) translateZ(-52px);
+}
+
+.frontFace {
+  width: 35px;
+  height: 70px;
+  transform: translateZ(17px);
+}
+
+.frontAboutMe {
+  background-image: url(/src/assets/img/sobreMi.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.frontStudies {
+  background-image: url(/src/assets/img/estudios.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.frontExperience {
+  background-image: url(/src/assets/img/experiencia.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.frontProject {
+  background-image: url(/src/assets/img/proyectos.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.frontLanguage {
+  background-image: url(/src/assets/img/idiomas.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.frontSkills {
+  background-image: url(/src/assets/img/habilidades.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.machineShadow {
+  width: 380px;
+  height: 380px;
+  background-color: transparent;
+  box-shadow: 0px 0px 350px 50px black;
+  z-index: 1200;
+  transform: rotateX(90deg) translateZ(35px) translateY(-190px) translateX(10px);
+}
+
+.floor {
+  width: 5000px;
+  height: 5000px;
+  background-image: linear-gradient(45deg, #874da2 0%, #c43a30 100%);
+  transform: rotateX(90deg) translateZ(2724px) translateX(-2500px) translateY(-1000px);
+  border-radius: 1500px;
+  z-index: 1000;
+}
+
+.aboutMeArticle, .studiesArticle, .experienceArticle, .projectsArticle, .languagesArticle, .skillsArticle {
+  position: absolute;
+  width: 600px;
+  height: 900px;
+  left: 100px;
+  border-radius: 20px;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  gap: 10px;
+  opacity: 1;
+  border: 3px dashed rgb(151, 244, 93);
+  z-index: 100000;
+  color: #ebe8e8;
+}
+.aboutMeArticle h1, .studiesArticle h1, .experienceArticle h1, .projectsArticle h1, .languagesArticle h1, .skillsArticle h1 {
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 36px;
+  color: rgb(151, 244, 93);
+}
+.aboutMeArticle ul, .studiesArticle ul, .experienceArticle ul, .projectsArticle ul, .languagesArticle ul, .skillsArticle ul {
+  width: 90%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.aboutMeArticle ul li, .studiesArticle ul li, .experienceArticle ul li, .projectsArticle ul li, .languagesArticle ul li, .skillsArticle ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  gap: 20px;
+}
+.aboutMeArticle ul li span, .studiesArticle ul li span, .experienceArticle ul li span, .projectsArticle ul li span, .languagesArticle ul li span, .skillsArticle ul li span {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+}
+.aboutMeArticle ul li .superBar, .studiesArticle ul li .superBar, .experienceArticle ul li .superBar, .projectsArticle ul li .superBar, .languagesArticle ul li .superBar, .skillsArticle ul li .superBar {
+  width: 100%;
+  height: 20px;
+  border-radius: 10px;
+  border: 1px solid rgb(49, 49, 49);
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-direction: row;
+}
+
+.aboutMeArticle img {
+  width: 30%;
+  height: auto;
+  border-radius: 50%;
+  border: 5px solid rgb(151, 244, 93);
+  filter: drop-shadow(0px 0px 10px rgb(151, 244, 93));
+}
+
+.aboutMeArticle h2 {
+  color: rgb(151, 244, 93);
+}
+
+.aboutMeArticle h3 {
+  color: rgb(151, 244, 93);
+  font-family: "Pixelify Sans", sans-serif;
+  margin-top: -10px;
+}
+
+.contactMe {
+  width: 100%;
+  text-align: left;
+}
+.contactMe ul {
+  width: 100%;
+}
+.contactMe li {
+  width: 100%;
+}
+.contactMe a {
+  color: #5a92f1;
+  text-decoration: none;
+  width: 100%;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.contactMe a:hover {
+  transform: scale(1.05);
+}
+
+.experienceArticle h2 {
+  color: rgb(151, 244, 93);
+}
+
+.experienceArticle span {
+  font-weight: 600;
+  font-style: italic;
+}
+
+.insideProjectArticle {
+  cursor: default;
+  width: 95%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.insideProjectArticle h2, .insideProjectArticle p {
+  width: 100%;
+}
+.insideProjectArticle h2 {
+  color: rgb(151, 244, 93);
+}
+
+.projectsArticle img {
+  width: 35px;
+  height: auto;
+}
+
+.languagesArticle img {
+  width: 20%;
+}
+
+.english, .español {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  color: #ebe8e8;
+  gap: 15px;
+}
+
+.skillsArticle img {
+  width: 10%;
+  height: auto;
+}
+
+.javascriptBar {
+  background-color: rgb(151, 244, 93);
+  width: 70%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.pooBar {
+  background-color: rgb(151, 244, 93);
+  width: 50%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.javaBar {
+  background-color: rgb(151, 244, 93);
+  width: 60%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.htmlBar {
+  background-color: rgb(151, 244, 93);
+  width: 90%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.cssBar {
+  background-color: rgb(151, 244, 93);
+  width: 90%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.sassBar {
+  background-color: rgb(151, 244, 93);
+  width: 60%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.responsiveBar {
+  background-color: rgb(151, 244, 93);
+  width: 70%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.gitBar {
+  background-color: rgb(151, 244, 93);
+  width: 60%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.photoshopBar {
+  background-color: rgb(151, 244, 93);
+  width: 60%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.premiereBar {
+  background-color: rgb(151, 244, 93);
+  width: 80%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.afterEffectsBar {
+  background-color: rgb(151, 244, 93);
+  width: 50%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.sqlBar {
+  background-color: rgb(151, 244, 93);
+  width: 60%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.closeButton {
+  border: 2px solid rgb(151, 244, 93);
+  border-radius: 20px;
+  padding: 10px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: rgb(50, 50, 50);
+  background-color: transparent;
+  width: 30%;
+  height: auto;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.closeButton:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+@keyframes buyAboutMeProduct {
+  0% {
+    transform: translateX(30px) translateY(60px) translateZ(-40px);
+  }
+  85% {
+    transform: translateX(30px) translateY(60px) translateZ(-20px);
+  }
+  100% {
+    transform: translateX(30px) translateY(450px) translateZ(-50px) rotateX(45deg) rotateY(30deg);
+  }
+}
+@keyframes buyStudiesProduct {
+  0% {
+    transform: translateX(120px) translateY(-79px) translateZ(-40px);
+  }
+  85% {
+    transform: translateX(120px) translateY(-79px) translateZ(-20px);
+  }
+  100% {
+    transform: translateX(120px) translateY(310px) translateZ(-50px) rotateX(60deg) rotateY(30deg);
+  }
+}
+@keyframes buyExperienceProduct {
+  0% {
+    transform: translateX(210px) translateY(-10px) translateZ(-40px);
+  }
+  85% {
+    transform: translateX(210px) translateY(-10px) translateZ(-20px);
+  }
+  100% {
+    transform: translateX(210px) translateY(375px) translateZ(-50px) rotateX(70deg) rotateY(30deg);
+  }
+}
+@keyframes buyProjectProduct {
+  0% {
+    transform: translateX(30px) translateY(-62px) translateZ(-40px);
+  }
+  85% {
+    transform: translateX(30px) translateY(-62px) translateZ(-20px);
+  }
+  100% {
+    transform: translateX(30px) translateY(245px) translateZ(-50px) rotateX(70deg) rotateY(30deg);
+  }
+}
+@keyframes buyLanguageProduct {
+  0% {
+    transform: translateX(120px) translateY(-131px) translateZ(-40px);
+  }
+  85% {
+    transform: translateX(120px) translateY(-131px) translateZ(-20px);
+  }
+  100% {
+    transform: translateX(120px) translateY(165px) translateZ(-50px) rotateX(70deg) rotateY(10deg);
+  }
+}
+@keyframes buySkillsProduct {
+  0% {
+    transform: translateX(210px) translateY(-201px) translateZ(-40px);
+  }
+  85% {
+    transform: translateX(210px) translateY(-201px) translateZ(-20px);
+  }
+  100% {
+    transform: translateX(210px) translateY(110px) translateZ(-50px) rotateX(70deg) rotateY(10deg);
+  }
+}
+@keyframes fadeInArticle {
+  0% {
+    opacity: 0;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=style.css.map */
